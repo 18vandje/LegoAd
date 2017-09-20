@@ -1,6 +1,8 @@
 // Lego Smurf Family
 // Adapted from Starter Code by Jess van de Ven
 // with help from Elliot and Mr. Smith
+
+  // Setting coordinates of the smurfs to (0,0)
   int papa_x;
   int papa_y;
   
@@ -14,14 +16,15 @@
   int gen3_x;
   int gen3_y;
 
-void setup() {
+void setup() { //sets the window size and color
   size(700,400);
   noStroke();
   background(000,000,000);
+  
 }
 
-void draw() {
-  background(000,000,000);
+void draw() {  
+  background(000,000,000);          //redraws background over old smurf positions
   // Papa Smurf
   fill(250,0,0);    //red
   rect(10+papa_x,10+papa_y,40,20); // Papa hat
@@ -81,6 +84,9 @@ void draw() {
   rect(650-gen3_x,73+gen3_y,40,20); //Smurf pants
   rect(650-gen3_x,94+gen3_y,40,20); //Smurf shoes
   
+  
+  //the following lines of code in this draw() method indicate when the x and y coordinates of the smurfs stop incrementing
+  
   if((papa_x)<230) {
    papa_x = papa_x+1; 
   }
@@ -105,5 +111,6 @@ void draw() {
   if((gen3_y)<260){
     gen3_y = gen3_y+1;
   }
-   
+  
+  
 }
